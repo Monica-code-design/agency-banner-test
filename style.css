@@ -1,0 +1,220 @@
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+.banner__section {
+    position: relative;
+    max-width: 75rem;
+    margin: 5rem auto;
+}
+
+.banner__block {
+    background-color: #000;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0;
+    min-height: 18rem;
+    overflow: hidden;
+}
+
+.banner__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.banner__container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(45deg, #000 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+}
+
+.banner__image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+}
+
+.banner__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    max-width: 35rem;
+    padding: 0 0 0 2rem;
+    text-align: left;
+    z-index: 2;
+}
+
+.banner__preheader {
+    display: block;
+    font-size: 0.625rem;
+    margin: 0 0 1.25rem 0;
+}
+
+.banner__preheader svg {
+    margin-right: 0.25rem;
+}
+
+.banner__header {
+    font-size: calc(17px + (30 - 17) * ((100vw - 300px) / (1600 - 300)));
+    line-height: 1.25;
+    letter-spacing: 1px;
+}
+@media only screen and (min-width: 1200px) {
+    .banner__header {
+        font-size: 1.875rem;
+    }
+}
+
+.banner__body {
+    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 300;
+    line-height: 1.25;
+    margin: 1rem 0 0.5rem 0;
+    max-width: 23rem;
+}
+@media only screen and (min-width: 1200px) {
+    .banner__body {
+        font-size: 1rem;
+    }
+}
+
+.banner__button {
+    display: block;
+    background: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #9B132B;
+    cursor: pointer;
+    margin: 0;
+    padding: 0.5rem 0 0 0;
+    border: 0;
+    outline: 0;
+}
+
+.banner__button svg {
+    margin-left: 0.25rem;
+}
+
+.banner__button:hover > .right-arrow-icon svg {
+    animation: .4s right-ease  infinite alternate; 
+    -webkit-animation: .4s right-ease infinite alternate;
+}
+
+@keyframes right-ease { 
+    0%{transform:translateX(0px)} 
+    100%{transform:translateX(8px)}
+} 
+@-webkit-keyframes right-ease { 
+    0%{-webkit-transform:translateX(0px)} 
+    100%{-webkit-transform:translateX(8px)} 
+} 
+
+@media only screen and (max-width: 768px) {
+    .banner__block {
+        min-height: 27rem;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .banner__container::after {
+        background: linear-gradient(0deg, #000 0%, #000 10%, rgba(0,0,0,0.75) 35%, rgba(0,0,0,0) 100%);
+    }
+    .banner__content {
+        position: absolute;
+        bottom: 30px;
+        width: 80%;
+    }
+    .banner__preheader {
+        margin: 0 0 0.5rem 0;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+    .banner__content {
+        width: 100%;
+        padding: 0 1rem;
+        bottom: 20px;
+    }
+    .banner__button {
+        width: 100%;
+        color: #fff;
+        justify-content: center;
+        text-align: center;
+        background: #c41230;
+        height: 3.5rem;
+        padding: 0 1.25rem;
+        margin: 0.5rem 0 0 0;
+        line-height: 1;
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+        transition: color ease-in .2s,background-color ease-in .2s,border-color ease-in .2s;
+    }
+    .banner__button:hover {
+        background: #9b132b;
+        text-decoration: none;
+    }
+    .banner__button svg {
+        display: none;
+    }
+}
