@@ -75,7 +75,7 @@ svg {
     left: 0;
     right: 0;
     z-index: 1;
-    background: linear-gradient(45deg, #000 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(145deg, #000 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 65%);
 }
 
 .banner__image {
@@ -201,7 +201,7 @@ svg {
         justify-content: center;
         text-align: center;
         background: #c41230;
-        height: 3.5rem;
+        height: 3.25rem;
         padding: 0 1.25rem;
         margin: 0.5rem 0 0 0;
         line-height: 1;
